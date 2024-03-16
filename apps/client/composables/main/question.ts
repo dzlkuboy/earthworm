@@ -82,7 +82,7 @@ export function useInput({
   function inputSyncUserInputWords() {
     let position = 0;
 
-    inputValue.value.split(separator).forEach((input, index) => {
+    (inputValue.value.trim()).split(separator).forEach((input, index) => {
       userInputWords[index].userInput = input;
 
       userInputWords[index].start = position;
